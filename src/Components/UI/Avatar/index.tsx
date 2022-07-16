@@ -1,3 +1,4 @@
+import { FC } from "react";
 import classNames from "classnames";
 import { css } from "@emotion/css";
 
@@ -7,6 +8,7 @@ const avatar = css`
   border-radius: 50%;
   display: inline-block;
   background: #00bcd4;
+  overflow: hidden;
   position: relative;
 
   &.online {
@@ -23,12 +25,23 @@ const avatar = css`
   }
 `;
 
-const avatar_img = css``;
+const avatar_img = css`
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+`;
 
-const Avatar = ({ isActive }: { isActive?: boolean }) => {
+type Props = {
+  isActive?: boolean;
+  img?: string;
+};
+
+const Avatar: FC<Props> = ({ isActive, img }) => {
   return (
     <span className={classNames(avatar, { online: isActive })}>
-      <img className={avatar_img} src="" alt="" />
+      <img className={avatar_img} src={img} alt="avatar" />
     </span>
   );
 };
