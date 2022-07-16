@@ -38,7 +38,7 @@ const ChatLayout = () => {
         <div className={styles.chat_body}>
           <ul className={styles.chat_body_wrapper}>
             <Message
-              alignRight
+              isMe
               text="Привет, как дела?"
               avatar="https://sun3-11.userapi.com/s/v1/ig2/RV90zyfVWCIeuE8OQWPg3j81lduPe-6pwsQn5Wx1gqaQOJS72gPakkXbWE3iuTLiwfoVyC-hvG09S5XV2Q1gnFWu.jpg?size=100x0&quality=96&crop=0,107,873,873&ava=1"
             />
@@ -51,7 +51,7 @@ const ChatLayout = () => {
               avatar="https://sun3-16.userapi.com/s/v1/ig2/YXC09dFJPYRlmmBI6IcT_kRacves3_9l3LPue0vUmcw5AYpdMCbTwe5lqZhtKzhznDoEJev1pY7FP026W4cruDbp.jpg?size=100x100&quality=95&crop=0,0,800,800&ava=1"
             />
             <Message
-              alignRight
+              isMe
               text="Привет, как дела?"
               avatar="https://sun3-11.userapi.com/s/v1/ig2/RV90zyfVWCIeuE8OQWPg3j81lduPe-6pwsQn5Wx1gqaQOJS72gPakkXbWE3iuTLiwfoVyC-hvG09S5XV2Q1gnFWu.jpg?size=100x0&quality=96&crop=0,107,873,873&ava=1"
             />
@@ -64,7 +64,7 @@ const ChatLayout = () => {
               avatar="https://sun3-16.userapi.com/s/v1/ig2/YXC09dFJPYRlmmBI6IcT_kRacves3_9l3LPue0vUmcw5AYpdMCbTwe5lqZhtKzhznDoEJev1pY7FP026W4cruDbp.jpg?size=100x100&quality=95&crop=0,0,800,800&ava=1"
             />
             <Message
-              alignRight
+              isMe
               text="Привет, как дела?"
               avatar="https://sun3-11.userapi.com/s/v1/ig2/RV90zyfVWCIeuE8OQWPg3j81lduPe-6pwsQn5Wx1gqaQOJS72gPakkXbWE3iuTLiwfoVyC-hvG09S5XV2Q1gnFWu.jpg?size=100x0&quality=96&crop=0,107,873,873&ava=1"
             />

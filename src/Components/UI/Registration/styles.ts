@@ -14,3 +14,7 @@ export const box_wrapper = css`
   width: 100%;
   text-align: center;
 `;
+
+export const form = css`
+  width: 100%;
+`;

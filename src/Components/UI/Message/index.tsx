@@ -8,23 +8,17 @@ type Type = {
   date?: any;
   text: string;
   avatar: string;
-  alignRight?: boolean;
+  isMe?: boolean;
 };
 
-const Message: FC<Type> = ({ date, text, avatar, alignRight }) => {
-  const myMessage = alignRight;
-
+const Message: FC<Type> = ({ date, text, avatar, isMe }) => {
   return (
-    <li className={classNames(styles.message, { alignRight: myMessage })}>
-      <div
-        className={classNames(styles.wrapper_avatar, { alignRight: myMessage })}
-      >
+    <li className={classNames(styles.message, { alignRight: isMe })}>
+      <div className={classNames(styles.wrapper_avatar, { alignRight: isMe })}>
         <Avatar img={avatar} />
       </div>
       <div>
-        <div
-          className={classNames(styles.message_text, { alignRight: myMessage })}
-        >
+        <div className={classNames(styles.message_text, { alignRight: isMe })}>
           {text}
         </div>
         <span className={styles.message_date}>{date}</span>

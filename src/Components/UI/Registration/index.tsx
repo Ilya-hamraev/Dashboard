@@ -1,8 +1,8 @@
 import { FC } from "react";
+import { useFormik } from "formik";
 
 import { Button } from "components/UI/Button";
 import { Input } from "components/UI/Input";
-import { useInput } from "hooks/useInput";
 import * as styles from "components/UI/Registration/styles";
 
 type Props = {
@@ -10,27 +10,48 @@ type Props = {
 };
 
 const Registration: FC<Props> = ({ goBack }) => {
-  const emailInput = useInput("");
-  const passwordInput = useInput("");
-  const passwordDublicateInput = useInput("");
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+      repeatPassword: "",
+    },
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
 
   return (
-    <div className={styles.content}>
-      <div className={styles.box_wrapper}>
-        <Input {...emailInput} htmlType="email" placeholder="Email" />
-      </div>
-      <div className={styles.box_wrapper}>
-        <Input {...passwordInput} htmlType="password" placeholder="Password" />
-      </div>
+    <form className={styles.content} onSubmit={formik.handleSubmit}>
       <div className={styles.box_wrapper}>
         <Input
-          {...passwordDublicateInput}
-          htmlType="password"
-          placeholder="Repeat the password"
+          name="email"
+          htmlType="email"
+          placeholder="Email"
+          value={formik.values.email}
+          onChange={formik.handleChange}
         />
       </div>
       <div className={styles.box_wrapper}>
-        <Button primary onClick={() => {}}>
+        <Input
+          name="password"
+          htmlType="password"
+          placeholder="Password"
+          value={formik.values.password}
+          onChange={formik.handleChange}
+        />
+      </div>
+      <div className={styles.box_wrapper}>
+        <Input
+          name="repeatPassword"
+          htmlType="password"
+          placeholder="Repeat the password"
+          value={formik.values.repeatPassword}
+          onChange={formik.handleChange}
+        />
+      </div>
+      <div className={styles.box_wrapper}>
+        <Button primary htmlType="submit">
           Sign Up
         </Button>
       </div>
@@ -39,7 +60,7 @@ const Registration: FC<Props> = ({ goBack }) => {
           Go Back
         </Button>
       </div>
-    </div>
+    </form>
   );
 };
 

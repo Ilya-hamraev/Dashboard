@@ -8,6 +8,7 @@ type Props = {
   onChange: ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
   className?: string;
+  name?: string;
 };
 
 const input_wrapper = css`
@@ -15,7 +16,7 @@ const input_wrapper = css`
   display: inline-block;
 `;
 
-const input = css`
+const input_styles = css`
   width: 100%;
   padding: 8px 10px;
   font-size: 1rem;
@@ -41,11 +42,13 @@ export const Input: FC<Props> = ({
   onChange,
   placeholder,
   className,
+  name,
 }) => {
   return (
     <div className={input_wrapper}>
       <input
-        className={classNames(input, className)}
+        name={name}
+        className={classNames(input_styles, className)}
         type={htmlType}
         value={value}
         onChange={onChange}
