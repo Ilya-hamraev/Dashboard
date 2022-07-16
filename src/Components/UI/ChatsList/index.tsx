@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { css } from "@emotion/css";
 
-import Avatar from "Components/UI/Avatar";
+import Avatar from "components/UI/Avatar";
 import { Groups } from "types";
 
 const channels_list = css`

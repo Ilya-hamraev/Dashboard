@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { css } from "@emotion/css";
 
-import { Button } from "Components/UI/Button";
-import { Input } from "Components/UI/Input";
+import { Button } from "components/UI/Button";
+import { Input } from "components/UI/Input";
 import { useInput } from "hooks/useInput";
 
 const content = css`

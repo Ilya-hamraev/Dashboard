@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { css } from "@emotion/css";
 
-import ChatsList from "Components/UI/ChatsList";
-import Avatar from "Components/UI/Avatar";
+import ChatsList from "components/UI/ChatsList";
+import Avatar from "components/UI/Avatar";
 import { useScrollToBottom } from "hooks/useScrollToBottom";
 import { useInput } from "hooks/useInput";
 import { Groups } from "types";

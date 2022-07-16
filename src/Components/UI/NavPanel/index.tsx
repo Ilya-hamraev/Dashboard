@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { RouteParams } from "types";
 import { navigation } from "navigation";
-import Icon from "Components/UI/Icon";
+import Icon from "components/UI/Icon";
 
 const container = css`
   border-right: 1px solid #d2d2d2;

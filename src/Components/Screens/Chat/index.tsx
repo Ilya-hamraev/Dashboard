@@ -1,6 +1,6 @@
-import PageWrapper from "Components/UI/PageWrapper";
-import MainScreen from "Components/UI/MainScreen";
-import ChatLayout from "Components/UI/Pages/Chat";
+import PageWrapper from "components/UI/PageWrapper";
+import MainScreen from "components/UI/MainScreen";
+import ChatLayout from "components/UI/Pages/Chat";
 
 const Main = () => (
   <PageWrapper>

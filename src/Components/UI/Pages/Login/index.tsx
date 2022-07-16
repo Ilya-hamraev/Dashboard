@@ -1,10 +1,10 @@
 import { FC, FormEvent, useState } from "react";
 import { css } from "@emotion/css";
 
-import { Button } from "Components/UI/Button";
-import { Input } from "Components/UI/Input";
+import { Button } from "components/UI/Button";
+import { Input } from "components/UI/Input";
 import { useInput } from "hooks/useInput";
-import Registration from "Components/UI/Registration";
+import Registration from "components/UI/Registration";
 
 const container = css`
   padding: 20px;
