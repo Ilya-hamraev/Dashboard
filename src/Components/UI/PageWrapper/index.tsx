@@ -9,12 +9,12 @@ const wrapper = css`
   height: 100%;
 `;
 
-type PageWrapperType = {
+type PageWrapperProps = {
   children: Children;
   className?: string;
 };
 
-const PageWrapper: FC<PageWrapperType> = ({ children, className }) => (
+const PageWrapper: FC<PageWrapperProps> = ({ children, className }) => (
   <main className={classNames(wrapper, className)}>{children}</main>
 );
 

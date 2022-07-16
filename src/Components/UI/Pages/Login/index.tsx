@@ -1,57 +1,10 @@
 import { FC, FormEvent, useState } from "react";
-import { css } from "@emotion/css";
 
 import { Button } from "components/UI/Button";
 import { Input } from "components/UI/Input";
 import { useInput } from "hooks/useInput";
 import Registration from "components/UI/Registration";
-
-const container = css`
-  padding: 20px;
-  width: 100%;
-  height: 100%;
-`;
-
-const content = css`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`;
-
-const box = css`
-  border-radius: 5px;
-  max-width: 400px;
-  max-height: 400px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-`;
-
-const box_wrapper = css`
-  padding: 20px;
-  width: 100%;
-  text-align: center;
-`;
-
-const title = css`
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-family: "OpenSansRegular", sans-serif;
-`;
-
-const form = css`
-  max-width: 360px;
-  width: 100%;
-`;
+import * as styles from "components/UI/Pages/Login/styles";
 
 const LoginLayout: FC = () => {
   const [isRegistration, setRegistration] = useState<boolean>(false);
@@ -65,33 +18,33 @@ const LoginLayout: FC = () => {
   };
 
   return (
-    <div className={container}>
+    <div className={styles.container}>
       {isRegistration ? (
-        <div className={content}>
-          <div className={title}>Registration</div>
-          <form className={form}>
-            <div className={box}>
+        <div className={styles.content}>
+          <div className={styles.title}>Registration</div>
+          <form className={styles.form}>
+            <div className={styles.box}>
               <Registration goBack={() => setRegistration(false)} />
             </div>
           </form>
         </div>
       ) : (
-        <div className={content}>
-          <div className={title}>Login</div>
-          <form className={form} onSubmit={handleSubmit}>
-            <div className={box}>
-              <div className={box_wrapper}>
+        <div className={styles.content}>
+          <div className={styles.title}>Login</div>
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <div className={styles.box}>
+              <div className={styles.box_wrapper}>
                 <Input {...login} placeholder="Login" />
               </div>
-              <div className={box_wrapper}>
+              <div className={styles.box_wrapper}>
                 <Input {...password} placeholder="Password" />
               </div>
-              <div className={box_wrapper}>
+              <div className={styles.box_wrapper}>
                 <Button primary htmlType="submit" onClick={handleSubmit}>
                   Sign In
                 </Button>
               </div>
-              <div className={box_wrapper}>
+              <div className={styles.box_wrapper}>
                 <Button link onClick={() => setRegistration(true)}>
                   Registarion
                 </Button>
