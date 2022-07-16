@@ -1,0 +1,30 @@
+{
+  "name": "Icons",
+  "inputDir": "src/assets/icons",
+  "outputDir": "src/assets/fonts",
+  "tag": "i",
+  "fontsUrl": "../fonts",
+  "normalize": true,
+  "fontTypes": [
+    "ttf",
+    "woff",
+    "woff2"
+  ],
+  "assetTypes": [
+    "css",
+    "ts"
+  ],
+  "formatOptions": {
+    "ts": {
+      "types": [
+        "constant",
+        "enum"
+      ],
+      "singleQuotes": true
+    }
+  },
+  "pathOptions": {
+    "css": "src/assets/css/icons.css",
+    "ts": "src/assets/css/icons.ts"
+  }
+}

@@ -2,8 +2,6 @@
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
 
 # testing
 /coverage
@@ -21,3 +19,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+/src/assets/css/icons.css
+/src/assets/css/icons.ts
+/src/assets/fonts/Icons.ttf
+/src/assets/fonts/Icons.woff
+/src/assets/fonts/Icons.woff2
