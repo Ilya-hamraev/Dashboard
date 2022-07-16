@@ -1,11 +1,9 @@
-import { Routes } from "types";
-
-import Login from "Components/Screens/Login";
-import Main from "Components/Screens/Dashboard";
-import Chat from "Components/Screens/Chat";
-import Settings from "Components/Screens/Settings";
-
+import Login from "components/Screens/Login";
+import Main from "components/Screens/Dashboard";
+import Chat from "components/Screens/Chat";
+import Settings from "components/Screens/Settings";
 import { Icons } from "assets/css/icons";
+import { Routes } from "types";
 
 export const navigation: Routes = {
   login: {

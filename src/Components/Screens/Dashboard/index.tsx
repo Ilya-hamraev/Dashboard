@@ -1,5 +1,5 @@
-import PageWrapper from "Components/UI/PageWrapper";
-import MainScreen from "Components/UI/MainScreen";
+import PageWrapper from "components/UI/PageWrapper";
+import MainScreen from "components/UI/MainScreen";
 
 const Main = () => {
   return (

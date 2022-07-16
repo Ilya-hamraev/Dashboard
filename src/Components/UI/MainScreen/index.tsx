@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { css } from "@emotion/css";
 
-import NavPanel from "Components/UI/NavPanel";
+import NavPanel from "components/UI/NavPanel";
 
 import { Children } from "types";
 

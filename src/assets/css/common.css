@@ -1,0 +1,51 @@
+:root {
+  --white: #ffffff;
+  --primary: #0791ff;
+  --gray: #cccccc;
+  --gray-2: #ebebeb;
+  --black: #000000;
+  --red: #f44336;
+
+  --shadow_input: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+  --shadow_box: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+/* fonts */
+@font-face {
+  font-family: "OpenSansLight";
+  src: url("../fonts/OpenSans-Light.woff2") format("woff2"),
+    url("../fonts/OpenSans-Light.svg") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.svg") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSansMedium";
+  src: url("../fonts/OpenSans-Medium.woff2") format("woff2"),
+    url("../fonts/OpenSans-Medium.svg") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../fonts/OpenSans-Bold.svg") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSansSemiBold";
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.svg") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSansExtraBold";
+  src: url("../fonts/OpenSans-ExtraBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-ExtraBold.svg") format("svg");
+}

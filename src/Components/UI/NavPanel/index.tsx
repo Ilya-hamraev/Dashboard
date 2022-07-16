@@ -1,49 +1,16 @@
 import { FC } from "react";
-import { css } from "@emotion/css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import classNames from "classnames";
 
 import { RouteParams } from "types";
 import { navigation } from "navigation";
-import Icon from "Components/UI/Icon";
-
-const container = css`
-  border-right: 1px solid #d2d2d2;
-  padding: 15px;
-  max-width: 100px;
-  width: 100%;
-`;
-
-const list_routes = css`
-  display: flex;
-  flex-direction: column;
-  height: -webkit-fill-available;
-`;
-
-const route = css`
-  &:last-child {
-    margin-top: auto;
-  }
-`;
-
-const button = css`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 10px;
-  cursor: pointer;
-  transition: box-shadow 0.4s;
-  border-radius: 5px;
-
-  &:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  }
-`;
-
-const button_icon = css``;
+import Icon from "components/UI/Icon";
+import { Icons } from "assets/css/icons";
+import * as styles from "components/UI/NavPanel/styles";
 
 const NavPanel: FC = () => {
+  const path = useLocation();
+
   const links = Object.entries(navigation)
     .reduce<RouteParams[]>((acc, [key, val]) => {
       acc.push(val);
@@ -52,17 +19,32 @@ const NavPanel: FC = () => {
     .filter((el) => !el.hidden)
     .sort((a, b) => a.order - b.order);
 
+  const activePath = path.pathname;
+
   return (
-    <nav className={container}>
-      <ul className={list_routes}>
+    <nav className={styles.container}>
+      <ul className={styles.list_routes}>
         {links.map((link) => (
-          <li key={link.path} className={route}>
-            <Link to={link.path} className={button}>
-              {link.icon && <Icon name={link.icon} className={button_icon} />}
+          <li key={link.path} className={styles.route}>
+            <Link
+              to={link.path}
+              className={classNames(styles.button, {
+                active: path.pathname === link.path,
+              })}
+            >
+              {link.icon && (
+                <Icon name={link.icon} className={styles.button_icon} />
+              )}
               {link.name}
             </Link>
           </li>
         ))}
+        <li className={styles.route}>
+          <a className={styles.button} href="#">
+            <Icon name={Icons.Logout} className={styles.button_icon} />
+            Logout
+          </a>
+        </li>
       </ul>
     </nav>
   );
