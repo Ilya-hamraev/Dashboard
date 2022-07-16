@@ -3,38 +3,43 @@ import { css } from "@emotion/css";
 
 import Avatar from "components/UI/Avatar";
 
-type ChatElementType = {
+type Props = {
   name: string;
   isActive?: boolean;
   avatar: string;
 };
 
-const channels_list_item = css`
+const dialogue_item = css`
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
   cursor: pointer;
+  padding: 10px 20px;
+  transition: 0.4s;
 
   &:last-child {
     margin-bottom: 0;
   }
+
+  &:hover {
+    background: var(--gray-2);
+  }
 `;
 
-const chat_name = css`
+const dialogue_name = css`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 `;
 
-const ChatElement: FC<ChatElementType> = ({ name, isActive }) => {
+const Dialogue: FC<Props> = ({ name, isActive }) => {
   return (
-    <li className={channels_list_item}>
+    <li className={dialogue_item}>
       <span style={{ marginRight: 10 }}>
         <Avatar isActive />
       </span>
-      <p className={chat_name}>{name}</p>
+      <p className={dialogue_name}>{name}</p>
     </li>
   );
 };
 
-export default ChatElement;
+export default Dialogue;

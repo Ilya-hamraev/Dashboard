@@ -1,5 +1,9 @@
 import Message from "components/UI/Message";
-import ChatsList from "components/UI/ChatsList";
+import Dialogues from "components/UI/Dialogues";
+import { Button } from "components/UI/Button";
+import Icon from "components/UI/Icon";
+import { Icons } from "assets/css/icons";
+
 import { useScrollToBottom } from "hooks/useScrollToBottom";
 import { useInput } from "hooks/useInput";
 import { Groups } from "types";
@@ -29,7 +33,7 @@ const ChatLayout = () => {
             className={styles.channels_search_input}
           />
         </div>
-        <ChatsList
+        <Dialogues
           list={list.filter((el) => el.name.includes(searchInput.value))}
         />
       </aside>

@@ -13,6 +13,7 @@ type Props = {
   // type?: "primary" | "secondary" | "default" | "text" | "link";
   borderless?: boolean;
   className?: string;
+  icon?: boolean;
 } & React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
@@ -26,6 +27,9 @@ const button = css`
   transition: 0.5s;
   min-width: 100px;
   font-family: "OpenSansRegular", sans-serif;
+
+  &.icon {
+  }
 
   &.link {
     border: none;
@@ -51,6 +55,7 @@ export const Button: FC<Props> = ({
   primary,
   secondary,
   link,
+  icon,
 }) => {
   return (
     <button
@@ -59,6 +64,7 @@ export const Button: FC<Props> = ({
         borderless: borderless,
         secondary: secondary,
         link: link,
+        icon: icon,
       })}
       type={htmlType}
       onClick={onClick}

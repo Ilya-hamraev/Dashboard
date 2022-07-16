@@ -1,27 +1,26 @@
 import { FC } from "react";
 import { css } from "@emotion/css";
 
-import ChatElement from "components/UI/ChatElement";
+import Dialogue from "components/UI/Dialogue";
 import { Groups } from "types";
 
-const channels_list = css`
+const dialogues_list = css`
   width: 100%;
   min-width: 250px;
   height: 100%;
-  padding: 12px;
   overflow: hidden;
   overflow-y: auto;
   flex: 1;
 `;
 
-type ChatsListType = {
+type Props = {
   list: Groups;
 };
 
-const ChatsList: FC<ChatsListType> = ({ list }) => (
-  <ul className={channels_list}>
+const Dialogues: FC<Props> = ({ list }) => (
+  <ul className={dialogues_list}>
     {list.map((el) => (
-      <ChatElement
+      <Dialogue
         key={el.name}
         name={el.name}
         isActive={el.isActive}
@@ -31,4 +30,4 @@ const ChatsList: FC<ChatsListType> = ({ list }) => (
   </ul>
 );
 
-export default ChatsList;
+export default Dialogues;

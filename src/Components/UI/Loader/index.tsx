@@ -1,4 +1,10 @@
+import { FC } from "react";
 import { css } from "@emotion/css";
+import classNames from "classnames";
+
+type Props = {
+  color?: string;
+};
 
 const ellipsis = css`
   display: inline-block;
@@ -65,8 +71,8 @@ const ellipsis = css`
   }
 `;
 
-export const Loader = () => (
-  <span className={ellipsis}>
+export const Loader: FC<Props> = ({ color }) => (
+  <span className={classNames(ellipsis)} style={{ background: color }}>
     <span />
     <span />
     <span />
