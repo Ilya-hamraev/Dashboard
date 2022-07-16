@@ -18,7 +18,6 @@ export const content = css`
 export const box = css`
   border-radius: 5px;
   max-width: 400px;
-  max-height: 400px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -30,7 +29,7 @@ export const box = css`
 `;
 
 export const box_wrapper = css`
-  padding: 20px;
+  padding: 10px 20px;
   width: 100%;
   text-align: center;
 `;

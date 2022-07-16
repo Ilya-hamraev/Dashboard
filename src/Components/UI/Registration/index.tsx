@@ -12,6 +12,7 @@ type Props = {
 const Registration: FC<Props> = ({ goBack }) => {
   const emailInput = useInput("");
   const passwordInput = useInput("");
+  const passwordDublicateInput = useInput("");
 
   return (
     <div className={styles.content}>
@@ -20,6 +21,13 @@ const Registration: FC<Props> = ({ goBack }) => {
       </div>
       <div className={styles.box_wrapper}>
         <Input {...passwordInput} htmlType="password" placeholder="Password" />
+      </div>
+      <div className={styles.box_wrapper}>
+        <Input
+          {...passwordDublicateInput}
+          htmlType="password"
+          placeholder="Repeat the password"
+        />
       </div>
       <div className={styles.box_wrapper}>
         <Button primary onClick={() => {}}>

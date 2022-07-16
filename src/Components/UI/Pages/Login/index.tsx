@@ -7,7 +7,7 @@ import Registration from "components/UI/Registration";
 import * as styles from "components/UI/Pages/Login/styles";
 
 const LoginLayout: FC = () => {
-  const [isRegistration, setRegistration] = useState<boolean>(false);
+  const [isSignUp, setIsSignUp] = useState<boolean>(false);
   const login = useInput("");
   const password = useInput("");
 
@@ -17,36 +17,42 @@ const LoginLayout: FC = () => {
     console.log({ password: password.value });
   };
 
+  const goBack = () => setIsSignUp(!isSignUp);
+
   return (
     <div className={styles.container}>
-      {isRegistration ? (
+      {isSignUp ? (
         <div className={styles.content}>
           <div className={styles.title}>Registration</div>
           <form className={styles.form}>
             <div className={styles.box}>
-              <Registration goBack={() => setRegistration(false)} />
+              <Registration goBack={goBack} />
             </div>
           </form>
         </div>
       ) : (
         <div className={styles.content}>
-          <div className={styles.title}>Login</div>
+          <div className={styles.title}>Sign In</div>
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.box}>
               <div className={styles.box_wrapper}>
-                <Input {...login} placeholder="Login" />
+                <Input {...login} placeholder="Email" />
               </div>
               <div className={styles.box_wrapper}>
-                <Input {...password} placeholder="Password" />
+                <Input
+                  {...password}
+                  placeholder="Password"
+                  htmlType="password"
+                />
               </div>
               <div className={styles.box_wrapper}>
                 <Button primary htmlType="submit" onClick={handleSubmit}>
-                  Sign In
+                  Login
                 </Button>
               </div>
               <div className={styles.box_wrapper}>
-                <Button link onClick={() => setRegistration(true)}>
-                  Registarion
+                <Button link onClick={goBack}>
+                  Sign Up
                 </Button>
               </div>
             </div>

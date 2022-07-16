@@ -10,7 +10,7 @@ export const content = css`
 `;
 
 export const box_wrapper = css`
-  padding: 20px;
+  padding: 10px 20px;
   width: 100%;
   text-align: center;
 `;
