@@ -2,7 +2,7 @@ import { FC } from "react";
 import { css } from "@emotion/css";
 
 import Avatar from "Components/UI/Avatar";
-import { Grops } from "types";
+import { Groups } from "types";
 
 const channels_list = css`
   width: 100%;
@@ -26,7 +26,7 @@ const channels_list_item = css`
 `;
 
 type ChatsListType = {
-  list: Grops;
+  list: Groups;
 };
 
 const ChatsList: FC<ChatsListType> = ({ list }) => (

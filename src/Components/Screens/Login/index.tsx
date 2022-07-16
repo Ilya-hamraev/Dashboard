@@ -1,4 +1,4 @@
-import LoginLayout from "Components/UI/Layout/Login";
+import LoginLayout from "Components/UI/Pages/Login";
 import PageWrapper from "Components/UI/PageWrapper";
 
 const Login = () => (

@@ -2,6 +2,7 @@ import { FC } from "react";
 import { css } from "@emotion/css";
 
 import { Button } from "Components/UI/Button";
+import { Input } from "Components/UI/Input";
 import { useInput } from "hooks/useInput";
 
 const content = css`
@@ -15,6 +16,8 @@ const content = css`
 
 const box_wrapper = css`
   padding: 20px;
+  width: 100%;
+  text-align: center;
 `;
 
 type Props = {
@@ -28,21 +31,20 @@ const Registration: FC<Props> = ({ goBack }) => {
   return (
     <div className={content}>
       <div className={box_wrapper}>
-        <input type="email" name="email" {...emailInput} placeholder="email" />
+        <Input {...emailInput} htmlType="email" placeholder="Email" />
       </div>
       <div className={box_wrapper}>
-        <input
-          type="password"
-          name="password"
-          {...passwordInput}
-          placeholder="password"
-        />
+        <Input {...passwordInput} htmlType="password" placeholder="Password" />
       </div>
       <div className={box_wrapper}>
-        <Button onClick={() => {}}>Register</Button>
+        <Button primary onClick={() => {}}>
+          Sign Up
+        </Button>
       </div>
       <div className={box_wrapper}>
-        <Button onClick={goBack}>Go Back</Button>
+        <Button link onClick={goBack}>
+          Go Back
+        </Button>
       </div>
     </div>
   );

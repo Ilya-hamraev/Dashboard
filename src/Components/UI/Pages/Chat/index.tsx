@@ -5,7 +5,7 @@ import ChatsList from "Components/UI/ChatsList";
 import Avatar from "Components/UI/Avatar";
 import { useScrollToBottom } from "hooks/useScrollToBottom";
 import { useInput } from "hooks/useInput";
-import { Grops } from "types";
+import { Groups } from "types";
 
 const container = css`
   display: flex;
@@ -91,7 +91,7 @@ const chat_input = css`
   resize: none;
 `;
 
-const list: Grops = [
+const list: Groups = [
   { name: "Ilya hamraev", isActive: true, avatar: "" },
   { name: "Vasya Puplin", isActive: false, avatar: "" },
   { name: "Silena Gomes", isActive: true, avatar: "" },
