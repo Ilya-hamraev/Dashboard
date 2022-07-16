@@ -15,6 +15,8 @@ const dialogue_item = css`
   cursor: pointer;
   padding: 10px 20px;
   transition: 0.4s;
+  font-size: 1em;
+  font-family: "OpenSansRegular", sans-serif;
 
   &:last-child {
     margin-bottom: 0;
@@ -35,7 +37,7 @@ const Dialogue: FC<Props> = ({ name, isActive }) => {
   return (
     <li className={dialogue_item}>
       <span style={{ marginRight: 10 }}>
-        <Avatar isActive />
+        <Avatar name={name} isActive />
       </span>
       <p className={dialogue_name}>{name}</p>
     </li>

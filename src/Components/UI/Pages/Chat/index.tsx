@@ -1,8 +1,5 @@
 import Message from "components/UI/Message";
 import Dialogues from "components/UI/Dialogues";
-import { Button } from "components/UI/Button";
-import Icon from "components/UI/Icon";
-import { Icons } from "assets/css/icons";
 
 import { useScrollToBottom } from "hooks/useScrollToBottom";
 import { useInput } from "hooks/useInput";
@@ -44,39 +41,48 @@ const ChatLayout = () => {
             <Message
               isMe
               text="Привет, как дела?"
+              name={"Alexey"}
               avatar="https://sun3-11.userapi.com/s/v1/ig2/RV90zyfVWCIeuE8OQWPg3j81lduPe-6pwsQn5Wx1gqaQOJS72gPakkXbWE3iuTLiwfoVyC-hvG09S5XV2Q1gnFWu.jpg?size=100x0&quality=96&crop=0,107,873,873&ava=1"
             />
             <Message
+              name={"Dima"}
               text="Привет, Все отличнО!"
               avatar="https://sun3-10.userapi.com/s/v1/ig2/M5qreqT9Qg_pejsD4orWkbdvZZtEnxHNQpPmUgH4yDT2M_UutV0rf8wmaxHIiJafjc3qC36x-HDZijpfUK4hBBmI.jpg?size=100x100&quality=96&crop=247,0,480,480&ava=1"
             />
             <Message
+              name={"Ilya"}
               text="Когда в гости?"
               avatar="https://sun3-16.userapi.com/s/v1/ig2/YXC09dFJPYRlmmBI6IcT_kRacves3_9l3LPue0vUmcw5AYpdMCbTwe5lqZhtKzhznDoEJev1pY7FP026W4cruDbp.jpg?size=100x100&quality=95&crop=0,0,800,800&ava=1"
             />
             <Message
+              name={"Grisha"}
               isMe
               text="Привет, как дела?"
               avatar="https://sun3-11.userapi.com/s/v1/ig2/RV90zyfVWCIeuE8OQWPg3j81lduPe-6pwsQn5Wx1gqaQOJS72gPakkXbWE3iuTLiwfoVyC-hvG09S5XV2Q1gnFWu.jpg?size=100x0&quality=96&crop=0,107,873,873&ava=1"
             />
             <Message
+              name={"Petya"}
               text="Привет, Все отличнО!"
               avatar="https://sun3-10.userapi.com/s/v1/ig2/M5qreqT9Qg_pejsD4orWkbdvZZtEnxHNQpPmUgH4yDT2M_UutV0rf8wmaxHIiJafjc3qC36x-HDZijpfUK4hBBmI.jpg?size=100x100&quality=96&crop=247,0,480,480&ava=1"
             />
             <Message
+              name={"Grisha"}
               text="Когда в гости?"
               avatar="https://sun3-16.userapi.com/s/v1/ig2/YXC09dFJPYRlmmBI6IcT_kRacves3_9l3LPue0vUmcw5AYpdMCbTwe5lqZhtKzhznDoEJev1pY7FP026W4cruDbp.jpg?size=100x100&quality=95&crop=0,0,800,800&ava=1"
             />
             <Message
               isMe
+              name={"Ilya"}
               text="Привет, как дела?"
               avatar="https://sun3-11.userapi.com/s/v1/ig2/RV90zyfVWCIeuE8OQWPg3j81lduPe-6pwsQn5Wx1gqaQOJS72gPakkXbWE3iuTLiwfoVyC-hvG09S5XV2Q1gnFWu.jpg?size=100x0&quality=96&crop=0,107,873,873&ava=1"
             />
             <Message
+              name={"Petya"}
               text="Привет, Все отличнО!"
               avatar="https://sun3-10.userapi.com/s/v1/ig2/M5qreqT9Qg_pejsD4orWkbdvZZtEnxHNQpPmUgH4yDT2M_UutV0rf8wmaxHIiJafjc3qC36x-HDZijpfUK4hBBmI.jpg?size=100x100&quality=96&crop=247,0,480,480&ava=1"
             />
             <Message
+              name={"Ilya"}
               text="Когда в гости?"
               avatar="https://sun3-16.userapi.com/s/v1/ig2/YXC09dFJPYRlmmBI6IcT_kRacves3_9l3LPue0vUmcw5AYpdMCbTwe5lqZhtKzhznDoEJev1pY7FP026W4cruDbp.jpg?size=100x100&quality=95&crop=0,0,800,800&ava=1"
             />
