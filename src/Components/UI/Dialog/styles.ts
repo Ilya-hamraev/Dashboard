@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
 
-export const dialogue = css`
+export const dialog = css`
   display: flex;
   align-items: center;
   cursor: pointer;

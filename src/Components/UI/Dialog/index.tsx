@@ -2,7 +2,7 @@ import { FC } from "react";
 import dayjs from "dayjs";
 
 import Avatar from "components/UI/Avatar";
-import * as styles from "components/UI/Dialogue/styles";
+import * as styles from "components/UI/Dialog/styles";
 
 type Props = {
   name: string;
@@ -12,18 +12,12 @@ type Props = {
   message: string;
 };
 
-const Dialogue: FC<Props> = ({
-  name,
-  isActive,
-  avatar,
-  message,
-  created_at,
-}) => {
+const Dialog: FC<Props> = ({ name, isActive, avatar, message, created_at }) => {
   const formatedDate = new Date(created_at);
   const dateLastMessage = dayjs(formatedDate).format("DD/MM/YY");
 
   return (
-    <li className={styles.dialogue}>
+    <li className={styles.dialog}>
       <span style={{ marginRight: 8 }}>
         <Avatar img={avatar} name={name} isActive />
       </span>
@@ -38,4 +32,4 @@ const Dialogue: FC<Props> = ({
   );
 };
 
-export default Dialogue;
+export default Dialog;

@@ -1,10 +1,10 @@
 import Message from "components/UI/Message";
-import Dialogues from "components/UI/Dialogues";
+import Dialogs from "components/UI/Dialogs";
 
 import { useScrollToBottom } from "hooks/useScrollToBottom";
 import { useInput } from "hooks/useInput";
 import * as styles from "components/UI/Pages/Chat/styles";
-import { dialogueTest } from "components/UI/Dialogues/dataTest";
+import { dialogueTest } from "components/UI/Dialogs/dataTest";
 
 const ChatLayout = () => {
   const searchInput = useInput("");
@@ -26,7 +26,7 @@ const ChatLayout = () => {
             className={styles.channels_search_input}
           />
         </div>
-        <Dialogues list={filteredDialogues} />
+        <Dialogs list={filteredDialogues} />
       </aside>
       <div className={styles.chat}>
         <div className={styles.chat_header}>header</div>
