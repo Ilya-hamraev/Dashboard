@@ -6,7 +6,7 @@ import { randomRgba, getInitials } from "helpers";
 
 type Props = {
   isActive?: boolean;
-  img?: string;
+  img?: string | null;
   name: string;
 };
 

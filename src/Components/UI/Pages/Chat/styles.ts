@@ -6,6 +6,8 @@ export const container = css`
 `;
 
 export const channels = css`
+  max-width: 300px;
+  width: 100%;
   border-right: 1px solid var(--gray);
   overflow: hidden;
   overflow-y: auto;

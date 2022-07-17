@@ -6,7 +6,6 @@ import { Groups } from "types";
 
 const dialogues_list = css`
   width: 100%;
-  min-width: 250px;
   height: 100%;
   overflow: hidden;
   overflow-y: auto;
@@ -17,17 +16,21 @@ type Props = {
   list: Groups;
 };
 
-const Dialogues: FC<Props> = ({ list }) => (
-  <ul className={dialogues_list}>
-    {list.map((el) => (
-      <Dialogue
-        key={el.name}
-        name={el.name}
-        isActive={el.isActive}
-        avatar={el.avatar}
-      />
-    ))}
-  </ul>
-);
+const Dialogues: FC<Props> = ({ list }) => {
+  return (
+    <ul className={dialogues_list}>
+      {list.map((el) => (
+        <Dialogue
+          key={el._id}
+          isActive={false}
+          name={el.user.fullName}
+          avatar={el.user.avatar}
+          created_at={el.created_at}
+          message={el.text}
+        />
+      ))}
+    </ul>
+  );
+};
 
 export default Dialogues;

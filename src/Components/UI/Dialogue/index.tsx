@@ -1,45 +1,39 @@
 import { FC } from "react";
-import { css } from "@emotion/css";
+import dayjs from "dayjs";
 
 import Avatar from "components/UI/Avatar";
+import * as styles from "components/UI/Dialogue/styles";
 
 type Props = {
   name: string;
   isActive?: boolean;
-  avatar: string;
+  avatar: string | null;
+  created_at: string;
+  message: string;
 };
 
-const dialogue_item = css`
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  padding: 10px 20px;
-  transition: 0.4s;
-  font-size: 1em;
-  font-family: "OpenSansRegular", sans-serif;
+const Dialogue: FC<Props> = ({
+  name,
+  isActive,
+  avatar,
+  message,
+  created_at,
+}) => {
+  const formatedDate = new Date(created_at);
+  const dateLastMessage = dayjs(formatedDate).format("DD/MM/YY");
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  &:hover {
-    background: var(--gray-2);
-  }
-`;
-
-const dialogue_name = css`
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-`;
-
-const Dialogue: FC<Props> = ({ name, isActive }) => {
   return (
-    <li className={dialogue_item}>
-      <span style={{ marginRight: 10 }}>
-        <Avatar name={name} isActive />
+    <li className={styles.dialogue}>
+      <span style={{ marginRight: 8 }}>
+        <Avatar img={avatar} name={name} isActive />
       </span>
-      <p className={dialogue_name}>{name}</p>
+      <div className={styles.message_box}>
+        <div className={styles.message_description}>
+          <p className={styles.name}>{name}</p>
+          <p className={styles.create_date}>{dateLastMessage}</p>
+        </div>
+        <div className={styles.text}>{message}</div>
+      </div>
     </li>
   );
 };

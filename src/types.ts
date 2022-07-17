@@ -26,7 +26,12 @@ export type RouteParams = {
 export type Routes = Record<string, RouteParams>;
 
 export type Groups = {
-  name: string;
-  isActive: boolean;
-  avatar: string;
+  _id: string;
+  text: string;
+  created_at: string;
+  user: {
+    _id: string;
+    fullName: string;
+    avatar: string | null;
+  };
 }[];

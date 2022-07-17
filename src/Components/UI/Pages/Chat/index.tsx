@@ -6,15 +6,7 @@ import { useInput } from "hooks/useInput";
 import { Groups } from "types";
 import * as styles from "components/UI/Pages/Chat/styles";
 
-const list: Groups = [
-  { name: "Ilya hamraev", isActive: true, avatar: "" },
-  { name: "Vasya Puplin", isActive: false, avatar: "" },
-  { name: "Silena Gomes", isActive: true, avatar: "" },
-  { name: "Johny Deep", isActive: true, avatar: "" },
-  { name: "Kirrill Roga", isActive: true, avatar: "" },
-  { name: "Erlf Foonl", isActive: true, avatar: "" },
-  { name: "Pops Ololohe", isActive: true, avatar: "" },
-];
+import { dialogueTest } from "components/UI/Dialogues/dataTest";
 
 const ChatLayout = () => {
   const searchInput = useInput("");
@@ -31,7 +23,9 @@ const ChatLayout = () => {
           />
         </div>
         <Dialogues
-          list={list.filter((el) => el.name.includes(searchInput.value))}
+          list={dialogueTest.filter((el) =>
+            el.user.fullName.includes(searchInput.value)
+          )}
         />
       </aside>
       <div className={styles.chat}>

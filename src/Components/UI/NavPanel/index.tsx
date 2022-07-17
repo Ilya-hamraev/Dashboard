@@ -19,8 +19,6 @@ const NavPanel: FC = () => {
     .filter((el) => !el.hidden)
     .sort((a, b) => a.order - b.order);
 
-  const activePath = path.pathname;
-
   return (
     <nav className={styles.container}>
       <ul className={styles.list_routes}>

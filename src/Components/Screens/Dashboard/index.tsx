@@ -4,7 +4,7 @@ import MainScreen from "components/UI/MainScreen";
 const Main = () => {
   return (
     <PageWrapper>
-      <MainScreen>Dashboard</MainScreen>
+      <MainScreen>dashboard</MainScreen>
     </PageWrapper>
   );
 };

@@ -1,20 +1,19 @@
 import { css } from "@emotion/css";
 
 export const avatar = css`
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 48px;
+  height: 48px;
   display: inline-block;
-  overflow: hidden;
   position: relative;
+  border-radius: 50%;
   border: 1px solid var(--gray-2);
 
   &.online {
     &:after {
       content: "";
-      width: 8px;
-      height: 8px;
-      background: #89ff00;
+      width: 10px;
+      height: 10px;
+      background: var(--green);
       border-radius: 50%;
       position: absolute;
       right: 2px;
@@ -29,6 +28,8 @@ export const avatar_img = css`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 50%;
+  overflow: hidden;
 `;
 
 export const initials = css`
