@@ -8,9 +8,24 @@ export const dialogue = css`
   transition: 0.4s;
   font-family: "OpenSansRegular", sans-serif;
   font-size: 0.9em;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    height: 1px;
+    background: var(--gray-2);
+  }
 
   &:last-child {
     margin-bottom: 0;
+
+    &:after {
+      visibility: hidden;
+    }
   }
 
   &:hover {
@@ -47,4 +62,5 @@ export const text = css`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-size: 0.9em;
 `;

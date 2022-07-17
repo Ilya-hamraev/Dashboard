@@ -3,14 +3,18 @@ import Dialogues from "components/UI/Dialogues";
 
 import { useScrollToBottom } from "hooks/useScrollToBottom";
 import { useInput } from "hooks/useInput";
-import { Groups } from "types";
 import * as styles from "components/UI/Pages/Chat/styles";
-
 import { dialogueTest } from "components/UI/Dialogues/dataTest";
 
 const ChatLayout = () => {
   const searchInput = useInput("");
   const scrollToRef = useScrollToBottom();
+
+  const filteredDialogues = dialogueTest.filter((dialogue) =>
+    dialogue.user.fullName
+      .toLocaleLowerCase()
+      .includes(searchInput.value.toLocaleLowerCase())
+  );
 
   return (
     <section className={styles.container}>
@@ -22,11 +26,7 @@ const ChatLayout = () => {
             className={styles.channels_search_input}
           />
         </div>
-        <Dialogues
-          list={dialogueTest.filter((el) =>
-            el.user.fullName.includes(searchInput.value)
-          )}
-        />
+        <Dialogues list={filteredDialogues} />
       </aside>
       <div className={styles.chat}>
         <div className={styles.chat_header}>header</div>

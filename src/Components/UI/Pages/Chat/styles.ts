@@ -17,8 +17,10 @@ export const channels = css`
 `;
 
 export const channels_search = css`
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 10px;
+  height: 60px;
   background: var(--white);
   border-bottom: 1px solid var(--gray);
   z-index: 1;
@@ -35,6 +37,7 @@ export const chat = css`
 `;
 
 export const chat_header = css`
+  height: 60px;
   padding: 15px;
   border-bottom: 1px solid var(--gray);
 `;
@@ -56,6 +59,7 @@ export const chat_body_wrapper = css`
 export const anchor = css``;
 
 export const chat_footer = css`
+  min-height: 60px;
   padding: 15px;
   border-top: 1px solid var(--gray);
 `;
