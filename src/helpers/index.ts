@@ -9,6 +9,4 @@ export const randomRgba = (): string => {
   return `rgba(${o(r() * s)}, ${o(r() * s)},${o(r() * s)}, ${r().toFixed(1)})`;
 };
 
-export const getInitials = (value: string): string => {
-  return value.slice(0, 1);
-};
+export const getInitials = (value: string): string => value.slice(0, 1);
